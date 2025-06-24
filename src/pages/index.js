@@ -1,5 +1,17 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import Image from 'next/image';
+
+// ...
+
+<Image
+  src="/images/nail4.jpeg"
+  alt={`Nail design ${i + 1}`}
+  width={300}
+  height={300}
+  className={styles.galleryImage}
+/>
+
 
 export default function Home() {
   const structuredData = {
@@ -82,7 +94,8 @@ export default function Home() {
           <h1 className={styles.title}>
             Welcome to <strong>M&M Nails</strong>
             <br />
-            Oldham’s Premium Nail Salon for Manicures & Pedicures
+            Oldham&apos;s Premium Nail Salon
+
           </h1>
           <p className={styles.description}>
             Located in the heart of Oldham, M&M Nails offers premium manicure
@@ -115,15 +128,13 @@ export default function Home() {
               "/images/nail4.jpeg",
               "/images/nail4.jpeg",
             ].map((src, i) => (
-              <img
-                key={i}
-                src={src}
-                alt={`Example of nail design number ${i + 1} from M&M Nails`}
-                className={styles.galleryImage}
-                loading="lazy"
-                width={300}
-                height={192}
-              />
+              <Image
+              src="/images/nail4.jpeg"
+              alt={`Nail design ${i + 1}`}
+              width={300}
+              height={300}
+              className={styles.galleryImage}
+            />
             ))}
           </div>
         </section>
@@ -138,7 +149,7 @@ export default function Home() {
 
   <h3>Frequently Asked Questions</h3>
   <ul>
-    <li><strong>Where is M&M Nails located?</strong><br/> We’re based in central Oldham, near [insert landmark if applicable].</li>
+    <li><strong>Where is M&M Nails located?</strong><br/> We&apos;re based in central Oldham, near [insert landmark if applicable].</li>
     <li><strong>Do I need to book an appointment?</strong><br/> Walk-ins are welcome, but we recommend calling ahead for availability.</li>
     <li><strong>What services do you offer?</strong><br/> We offer manicures, pedicures, acrylics, gel nails, and custom nail art.</li>
   </ul>
