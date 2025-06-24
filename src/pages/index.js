@@ -7,7 +7,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "BeautySalon",
     name: "M&M Nails",
-    image: "https://mm-nails.example.com/images/og-image.jpg",
+    image: "https://mmnailsalon.netlify.app/images/nail2.jpg",
     telephone: "+441612345678",
     address: {
       "@type": "PostalAddress",
@@ -26,20 +26,23 @@ export default function Home() {
     <>
       <Head>
         <title>
-        M&amp;M Nails - Premium Nail Salon in Oldham | Manicures & Pedicures
+          M&amp;M Nails - Premium Nail Salon in Oldham | Manicures & Pedicures
         </title>
-        <meta name="google-site-verification" content="G-RBx9VaOR-ll2Y2sU37QyOvXjK-z8bDu1qZhHGJxT0" />        <meta
+        <meta
           name="description"
-          content="Visit M&M Nails in Oldham for expert manicures, pedicures, and stunning nail art. Friendly service, hygienic environment, and beautiful nails await you."
+          content="Looking for a nails salon walk in near me in Oldham? Visit M&M Nails for expert manicures, acrylic nails, pedicures, and friendly service. Walk-ins welcome!"
         />
         <meta
+          name="google-site-verification"
+          content="G-RBx9VaOR-ll2Y2sU37QyOvXjK-z8bDu1qZhHGJxT0"
+        />{" "}
+        <meta
           name="keywords"
-          content="nail salon, manicure, pedicure, nail art, Oldham, beauty, nail designs, professional nails"
+          content="nail salon, manicure, pedicure, nail art, Oldham, beauty, nail designs, professional nails, walk in"
         />
         <meta name="author" content="M&M Nails" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://mm-nails.example.com/" />
-
+        <link rel="canonical" href="https://mmnailsalon.netlify.app" />
         {/* Open Graph */}
         <meta
           property="og:title"
@@ -53,9 +56,8 @@ export default function Home() {
         <meta property="og:url" content="https://mm-nails.example.com/" />
         <meta
           property="og:image"
-          content="https://mm-nails.example.com/images/og-image.jpg"
+          content="https://mmnailsalon.netlify.app/images/nail2.jpg"
         />
-
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -70,7 +72,6 @@ export default function Home() {
           name="twitter:image"
           content="https://mm-nails.example.com/images/og-image.jpg"
         />
-
         {/* Structured Data */}
         <script
           type="application/ld+json"
@@ -86,11 +87,11 @@ export default function Home() {
             Oldham&apos;s Premium Nail Salon
           </h1>
           <p className={styles.description}>
-            Located in the heart of Oldham, M&amp;M  Nails offers premium manicure
-            and pedicure services tailored to your style. Whether you&apos;re looking
-            for elegant nail art or a relaxing treatment, our Oldham nail salon
-            provides a hygienic and friendly environment for all your beauty
-            needs.
+            Located in the heart of Oldham, M&amp;M Nails offers premium
+            manicure and pedicure services tailored to your style. Whether
+            you&apos;re looking for elegant nail art or a relaxing treatment,
+            our Oldham nail salon provides a hygienic and friendly environment
+            for all your beauty needs.
           </p>
           <a
             href="tel:+441612345678"
@@ -128,32 +129,43 @@ export default function Home() {
           </div>
         </section>
         <section className={styles.localSeo}>
-        <h2>Why Choose M&amp;M Nails in Oldham?</h2>
+          <h2>Why Choose M&amp;M Nails in Oldham?</h2>
           <p>
-            Located in the heart of Oldham, M&amp;M Nails is your go-to destination
-            for professional manicures, pedicures, and bespoke nail art. Whether
-            youre prepping for a special occasion or just want beautiful,
-            healthy nails, our experienced nail technicians offer the highest
-            quality service in a friendly, hygienic environment. Visit us today
-            and see why Oldham locals trust us for their nail care.
+            Located in the heart of Oldham, M&amp;M Nails is your go-to
+            destination for professional manicures, pedicures, and bespoke nail
+            art. Whether youre prepping for a special occasion or just want
+            beautiful, healthy nails, our experienced nail technicians offer the
+            highest quality service in a friendly, hygienic environment. Visit
+            us today and see why Oldham locals trust us for their nail care.
           </p>
 
           <h3>Frequently Asked Questions</h3>
           <ul>
             <li>
               <strong>Where is M&amp;M Nails located?</strong>
-              <br /> We&apos;re based in central Oldham, near [insert landmark
-              if applicable].
+              <br />
+              We&apos;re based in central Oldham, near [insert landmark if
+              applicable].
             </li>
             <li>
               <strong>Do I need to book an appointment?</strong>
-              <br /> Walk-ins are welcome, but we recommend calling ahead for
+              <br />
+              Walk-ins are welcome, but we recommend calling ahead for
               availability.
             </li>
             <li>
+              <strong>Can I walk in without an appointment?</strong>
+              <br />
+              Yes! M&M Nails is a popular{" "}
+              <strong>nails salon walk in near me</strong> option in Oldham. We
+              welcome walk-in clients for manicures, acrylic nails, and
+              pedicures — no appointment necessary.
+            </li>
+            <li>
               <strong>What services do you offer?</strong>
-              <br /> We offer manicures, pedicures, acrylics, gel nails, and
-              custom nail art.
+              <br />
+              We offer manicures, pedicures, acrylics, gel nails, and custom
+              nail art.
             </li>
           </ul>
         </section>
