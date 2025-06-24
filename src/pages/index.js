@@ -20,7 +20,8 @@ export default function Home() {
     url: "https://mmnailsalon.netlify.app/",
     description:
       "M&M Nails is Oldham's premium nail salon offering expert manicures, pedicures, and nail art in a hygienic and friendly environment.",
-  };
+   priceRange: "££",
+    };
 
   return (
     <>
