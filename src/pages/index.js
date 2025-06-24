@@ -1,115 +1,163 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    name: "M&M Nails",
+    image: "https://mm-nails.example.com/images/og-image.jpg",
+    telephone: "+441612345678",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Hamilton Street",
+      addressLocality: "Oldham",
+      addressRegion: "Greater Manchester",
+      postalCode: "OL1 1AA",
+      addressCountry: "UK",
+    },
+    url: "https://mm-nails.example.com/",
+    description:
+      "M&M Nails is Oldham's premium nail salon offering expert manicures, pedicures, and nail art in a hygienic and friendly environment.",
+  };
+
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <Head>
+        <title>
+          M&M Nails - Premium Nail Salon in Oldham | Manicures & Pedicures
+        </title>
+        <meta
+          name="description"
+          content="Visit M&M Nails in Oldham for expert manicures, pedicures, and stunning nail art. Friendly service, hygienic environment, and beautiful nails await you."
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
+        <meta
+          name="keywords"
+          content="nail salon, manicure, pedicure, nail art, Oldham, beauty, nail designs, professional nails"
+        />
+        <meta name="author" content="M&M Nails" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://mm-nails.example.com/" />
+
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="M&M Nails - Premium Nail Salon in Oldham"
+        />
+        <meta
+          property="og:description"
+          content="Expert manicures, pedicures, and nail art services in Oldham. Beautiful nails, friendly service."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mm-nails.example.com/" />
+        <meta
+          property="og:image"
+          content="https://mm-nails.example.com/images/og-image.jpg"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="M&M Nails - Premium Nail Salon in Oldham"
+        />
+        <meta
+          name="twitter:description"
+          content="Expert manicures, pedicures, and nail art services in Oldham."
+        />
+        <meta
+          name="twitter:image"
+          content="https://mm-nails.example.com/images/og-image.jpg"
+        />
+
+        {/* Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
+
+      <main className={styles.main}>
+        <header>
+          <h1 className={styles.title}>
+            Welcome to <strong>M&M Nails</strong>
+            <br />
+            Oldham’s Premium Nail Salon for Manicures & Pedicures
+          </h1>
+          <p className={styles.description}>
+            Located in the heart of Oldham, M&M Nails offers premium manicure
+            and pedicure services tailored to your style. Whether you're looking
+            for elegant nail art or a relaxing treatment, our Oldham nail salon
+            provides a hygienic and friendly environment for all your beauty
+            needs.
+          </p>
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="tel:+441612345678"
+            className={styles.callButton}
+            aria-label="Call M and M Nails at 0161 234 5678"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
+            Call Now: 0161 234 5678
           </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        </header>
+
+        <section aria-labelledby="gallery-heading">
+          <h2 id="gallery-heading" className={styles.galleryTitle}>
+            Explore Our Nail Design Gallery
+          </h2>
+          <div className={styles.gallery}>
+            {[
+              "/images/nail4.jpeg",
+              "/images/nail4.jpeg",
+              "/images/nail4.jpeg",
+              "/images/nail4.jpeg",
+              "/images/nail4.jpeg",
+              "/images/nail4.jpeg",
+              "/images/nail4.jpeg",
+              "/images/nail4.jpeg",
+            ].map((src, i) => (
+              <img
+                key={i}
+                src={src}
+                alt={`Example of nail design number ${i + 1} from M&M Nails`}
+                className={styles.galleryImage}
+                loading="lazy"
+                width={300}
+                height={192}
+              />
+            ))}
+          </div>
+        </section>
+        <section className={styles.localSeo}>
+  <h2>Why Choose M&M Nails in Oldham?</h2>
+  <p>
+    Located in the heart of Oldham, M&M Nails is your go-to destination for professional manicures,
+    pedicures, and bespoke nail art. Whether you're prepping for a special occasion or just want
+    beautiful, healthy nails, our experienced nail technicians offer the highest quality service in a
+    friendly, hygienic environment. Visit us today and see why Oldham locals trust us for their nail care.
+  </p>
+
+  <h3>Frequently Asked Questions</h3>
+  <ul>
+    <li><strong>Where is M&M Nails located?</strong><br/> We’re based in central Oldham, near [insert landmark if applicable].</li>
+    <li><strong>Do I need to book an appointment?</strong><br/> Walk-ins are welcome, but we recommend calling ahead for availability.</li>
+    <li><strong>What services do you offer?</strong><br/> We offer manicures, pedicures, acrylics, gel nails, and custom nail art.</li>
+  </ul>
+</section>
+
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <footer className={styles.footer}>
+  <address itemScope itemType="https://schema.org/PostalAddress">
+    <p>
+      <strong itemProp="name">M&M Nails</strong><br />
+      <span itemProp="streetAddress">123 Nail St</span><br />
+      <span itemProp="addressLocality">Oldham</span>,{' '}
+      <span itemProp="addressRegion">Greater Manchester</span><br />
+      <span itemProp="postalCode">OL1 1AA</span><br />
+      <a href="tel:+441612345678" itemProp="telephone">0161 234 5678</a>
+    </p>
+  </address>
+</footer>
+
+    </>
   );
 }
