@@ -2,17 +2,6 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from 'next/image';
 
-// ...
-
-<Image
-  src="/images/nail4.jpeg"
-  alt={`Nail design ${i + 1}`}
-  width={300}
-  height={300}
-  className={styles.galleryImage}
-/>
-
-
 export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -118,24 +107,26 @@ export default function Home() {
             Explore Our Nail Design Gallery
           </h2>
           <div className={styles.gallery}>
-            {[
-              "/images/nail4.jpeg",
-              "/images/nail4.jpeg",
-              "/images/nail4.jpeg",
-              "/images/nail4.jpeg",
-              "/images/nail4.jpeg",
-              "/images/nail4.jpeg",
-              "/images/nail4.jpeg",
-              "/images/nail4.jpeg",
-            ].map((src, i) => (
-              <Image
-              src="/images/nail4.jpeg"
-              alt={`Nail design ${i + 1}`}
-              width={300}
-              height={300}
-              className={styles.galleryImage}
-            />
-            ))}
+          {[
+  "/images/nail4.jpeg",
+  "/images/nail4.jpeg",
+  "/images/nail4.jpeg",
+  "/images/nail4.jpeg",
+  "/images/nail4.jpeg",
+  "/images/nail4.jpeg",
+  "/images/nail4.jpeg",
+  "/images/nail4.jpeg",
+].map((src, i) => (
+  <Image
+    key={i} // ✅ Add this
+    src={src} // You had hardcoded "/images/nail4.jpeg", but better to use the dynamic `src`
+    alt={`Nail design ${i + 1}`}
+    width={300}
+    height={300}
+    className={styles.galleryImage}
+  />
+))}
+
           </div>
         </section>
         <section className={styles.localSeo}>
