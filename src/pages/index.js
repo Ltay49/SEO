@@ -58,6 +58,7 @@ export default function Home() {
           property="og:image"
           content="https://mmnailsalon.netlify.app/images/nail2.jpg"
         />
+          <link rel="icon" href="/favicon.png" type="image/png"/>
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
