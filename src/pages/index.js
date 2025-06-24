@@ -87,7 +87,7 @@ export default function Home() {
           </h1>
           <p className={styles.description}>
             Located in the heart of Oldham, M&amp;M  Nails offers premium manicure
-            and pedicure services tailored to your style. Whether you're looking
+            and pedicure services tailored to your style. Whether you&apos;re looking
             for elegant nail art or a relaxing treatment, our Oldham nail salon
             provides a hygienic and friendly environment for all your beauty
             needs.
@@ -132,7 +132,7 @@ export default function Home() {
           <p>
             Located in the heart of Oldham, M&amp;M Nails is your go-to destination
             for professional manicures, pedicures, and bespoke nail art. Whether
-            you're prepping for a special occasion or just want beautiful,
+            youre prepping for a special occasion or just want beautiful,
             healthy nails, our experienced nail technicians offer the highest
             quality service in a friendly, hygienic environment. Visit us today
             and see why Oldham locals trust us for their nail care.
@@ -141,7 +141,7 @@ export default function Home() {
           <h3>Frequently Asked Questions</h3>
           <ul>
             <li>
-              <strong>Where is M&amp;M  Nails located?</strong>
+              <strong>Where is M&amp;M Nails located?</strong>
               <br /> We&apos;re based in central Oldham, near [insert landmark
               if applicable].
             </li>
@@ -161,7 +161,7 @@ export default function Home() {
       <footer className={styles.footer}>
         <address itemScope itemType="https://schema.org/PostalAddress">
           <p>
-            <strong itemProp="name">M&amp;M  Nails</strong>
+            <strong itemProp="name">M&amp;M Nails</strong>
             <br />
             <span itemProp="streetAddress">123 Nail St</span>
             <br />
