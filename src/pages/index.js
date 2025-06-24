@@ -17,7 +17,7 @@ export default function Home() {
       postalCode: "OL1 1AA",
       addressCountry: "UK",
     },
-    url: "https://mm-nails.example.com/",
+    url: "https://mmnailsalon.netlify.app/",
     description:
       "M&M Nails is Oldham's premium nail salon offering expert manicures, pedicures, and nail art in a hygienic and friendly environment.",
   };
@@ -28,7 +28,7 @@ export default function Home() {
         <title>
         M&amp;M Nails - Premium Nail Salon in Oldham | Manicures & Pedicures
         </title>
-        <meta
+        <meta name="google-site-verification" content="G-RBx9VaOR-ll2Y2sU37QyOvXjK-z8bDu1qZhHGJxT0" />        <meta
           name="description"
           content="Visit M&M Nails in Oldham for expert manicures, pedicures, and stunning nail art. Friendly service, hygienic environment, and beautiful nails await you."
         />
