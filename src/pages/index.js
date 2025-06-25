@@ -1,9 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import Header from "./components/Header";
-import Slideshow from "./components/Slideshow";
-import Services from "./components/Services";
+import Header from "../components/Header";
+import Slideshow from "../components/Slideshow";
+import Services from "../components/Services";
 
 export default function Home() {
   const structuredData = {
