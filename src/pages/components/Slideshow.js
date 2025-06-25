@@ -31,7 +31,6 @@ export default function Slideshow() {
             layout="fill"
             objectFit="cover"
             priority={i === 0}
-            unoptimized
           />
         </div>
       ))}
