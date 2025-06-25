@@ -178,7 +178,7 @@ export default function Home() {
           <p>
             Located in the heart of Oldham, <strong>M&amp;M Nails</strong> is
             your go-to destination for professional manicures, pedicures, and
-            bespoke nail art. Whether you’re preparing for a special occasion or
+            bespoke nail art. Whether you&apos;re preparing for a special occasion or
             simply want healthy, beautiful nails, our experienced nail
             technicians deliver high-quality service in a clean and friendly
             environment. Visit us today and discover why so many locals in
@@ -190,7 +190,7 @@ export default function Home() {
             <details>
               <summary>Where is M&amp;M Nails located?</summary>
               <p>
-                We're based in central Oldham, near <em>[insert landmark]</em>.
+                We&apos;re based in central Oldham, near <em>[insert landmark]</em>.
               </p>
             </details>
 
