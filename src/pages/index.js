@@ -1,6 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import Header from "./components/Header";
+import Slideshow from "./components/Slideshow";
+import Services from "./components/Services";
 
 export default function Home() {
   const structuredData = {
@@ -20,8 +23,8 @@ export default function Home() {
     url: "https://mmnailsalon.netlify.app/",
     description:
       "M&M Nails is Oldham's premium nail salon offering expert manicures, pedicures, and nail art in a hygienic and friendly environment.",
-   priceRange: "££",
-    };
+    priceRange: "££",
+  };
 
   return (
     <>
@@ -59,7 +62,7 @@ export default function Home() {
           property="og:image"
           content="https://mmnailsalon.netlify.app/images/nail2.jpg"
         />
-          <link rel="icon" href="/favicon.png" type="image/png"/>
+        <link rel="icon" href="/favicon.png" type="image/png" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -79,31 +82,71 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-
+      <Header />
+      <Slideshow />
       <main className={styles.main}>
-        <header>
-          <h1 className={styles.title}>
-            Welcome to <strong>M&amp;M Nails</strong>
-            <br />
-            Oldham&apos;s Premium Nail Salon
-          </h1>
-          <p className={styles.description}>
-            Located in the heart of Oldham, M&amp;M Nails offers premium
-            manicure and pedicure services tailored to your style. Whether
-            you&apos;re looking for elegant nail art or a relaxing treatment,
-            our Oldham nail salon provides a hygienic and friendly environment
-            for all your beauty needs.
-          </p>
-          <a
-            href="tel:+441612345678"
-            className={styles.callButton}
-            aria-label="Call M and M Nails at 0161 234 5678"
-          >
-            Call Now: 0161 234 5678
-          </a>
-        </header>
+        <header className={styles.header}>
+          <div className={styles.leftColumn}>
+            <h1 className={styles.title}>
+              Welcome to <strong>M&amp;M Nails</strong>
+              <br />
+              Oldham&apos;s Premium Nail Salon
+            </h1>
 
+            <a
+              href="tel:+441612345678"
+              className={styles.callButton}
+              aria-label="Call M and M Nails at 0161 234 5678"
+            >
+              Call Now: 0161 234 5678
+            </a>
+
+            <a
+              href="mailto:info@mmnails.co.uk"
+              className={styles.emailLink}
+              aria-label="Email M and M Nails"
+            >
+              info@mmnails.co.uk
+            </a>
+
+            <a
+              href="https://instagram.com/mmnails"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit M and M Nails Instagram"
+              className={styles.instagramLink}
+            >
+              {/* Instagram SVG Icon */}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                width="24"
+                height="24"
+              >
+                <title>Instagram</title>
+                <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm4.75-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z" />
+              </svg>
+            </a>
+          </div>
+
+          <div className={styles.rightColumn}>
+            <p className={styles.description}>
+              Located in the heart of Oldham, M&amp;M Nails offers premium
+              manicure and pedicure services tailored to your style. Whether
+              you&apos;re looking for elegant nail art or a relaxing treatment,
+              our Oldham nail salon provides a hygienic and friendly environment
+              for all your beauty needs.
+            </p>
+          </div>
+        </header>
+        <Services />
         <section aria-labelledby="gallery-heading">
           <h2 id="gallery-heading" className={styles.galleryTitle}>
             Explore Our Nail Design Gallery
@@ -133,47 +176,63 @@ export default function Home() {
         <section className={styles.localSeo}>
           <h2>Why Choose M&amp;M Nails in Oldham?</h2>
           <p>
-            Located in the heart of Oldham, M&amp;M Nails is your go-to
-            destination for professional manicures, pedicures, and bespoke nail
-            art. Whether youre prepping for a special occasion or just want
-            beautiful, healthy nails, our experienced nail technicians offer the
-            highest quality service in a friendly, hygienic environment. Visit
-            us today and see why Oldham locals trust us for their nail care.
+            Located in the heart of Oldham, <strong>M&amp;M Nails</strong> is
+            your go-to destination for professional manicures, pedicures, and
+            bespoke nail art. Whether you’re preparing for a special occasion or
+            simply want healthy, beautiful nails, our experienced nail
+            technicians deliver high-quality service in a clean and friendly
+            environment. Visit us today and discover why so many locals in
+            Oldham trust us for their nail care.
           </p>
 
           <h3>Frequently Asked Questions</h3>
-          <ul>
-            <li>
-              <strong>Where is M&amp;M Nails located?</strong>
-              <br />
-              We&apos;re based in central Oldham, near [insert landmark if
-              applicable].
-            </li>
-            <li>
-              <strong>Do I need to book an appointment?</strong>
-              <br />
-              Walk-ins are welcome, but we recommend calling ahead for
-              availability.
-            </li>
-            <li>
-              <strong>Can I walk in without an appointment?</strong>
-              <br />
-              Yes! M&M Nails is a popular{" "}
-              <strong>nails salon walk in near me</strong> option in Oldham. We
-              welcome walk-in clients for manicures, acrylic nails, and
-              pedicures — no appointment necessary.
-            </li>
-            <li>
-              <strong>What services do you offer?</strong>
-              <br />
-              We offer manicures, pedicures, acrylics, gel nails, and custom
-              nail art.
-            </li>
-          </ul>
+          <div className={styles.faqAccordion}>
+            <details>
+              <summary>Where is M&amp;M Nails located?</summary>
+              <p>
+                We're based in central Oldham, near <em>[insert landmark]</em>.
+              </p>
+            </details>
+
+            <details>
+              <summary>Do I need to book an appointment?</summary>
+              <p>
+                Walk-ins are welcome, but we recommend calling ahead to check
+                availability.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can I walk in without an appointment?</summary>
+              <p>
+                Yes! <strong>M&amp;M Nails</strong> is one of the top-rated{" "}
+                <strong>nail salons for walk-ins in Oldham</strong>. We welcome
+                clients without appointments for manicures, acrylic nails, and
+                pedicures.
+              </p>
+            </details>
+
+            <details>
+              <summary>What services do you offer?</summary>
+              <p>
+                We provide manicures, pedicures, acrylics, gel nails, and custom
+                nail art tailored to your preferences.
+              </p>
+            </details>
+          </div>
         </section>
       </main>
-      <footer className={styles.footer}>
-        <address itemScope itemType="https://schema.org/PostalAddress">
+      <footer
+        className={styles.footer}
+        role="contentinfo"
+        itemScope
+        itemType="https://schema.org/BeautySalon"
+      >
+        <address
+          itemProp="address"
+          itemScope
+          itemType="https://schema.org/PostalAddress"
+        >
           <p>
             <strong itemProp="name">M&amp;M Nails</strong>
             <br />
@@ -184,7 +243,11 @@ export default function Home() {
             <br />
             <span itemProp="postalCode">OL1 1AA</span>
             <br />
-            <a href="tel:+441612345678" itemProp="telephone">
+            <a
+              href="tel:+441612345678"
+              itemProp="telephone"
+              aria-label="Call M and M Nails at 0161 234 5678"
+            >
               0161 234 5678
             </a>
           </p>

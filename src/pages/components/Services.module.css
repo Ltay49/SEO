@@ -1,0 +1,73 @@
+.servicesSection {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #b85c7e; /* Soft pinkish */
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: .5rem;
+  }
+  
+  .serviceCard {
+    /* background-color: #f5c3d7; */
+    /* border-radius: 12px; */
+    box-shadow: 0 6px 12px rgba(127, 63, 86, 0.4);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(184, 92, 126, 0.3);
+  }
+  
+  .imageWrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .serviceImage {
+    object-fit: contain;
+  }
+  
+  .textContent {
+    padding: 1.25rem 1.5rem 2rem;
+    text-align: center;
+  }
+  
+  .icon {
+    font-size: 2.5rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    color: #b85c7e;
+  }
+  
+  .t {
+    margin: 0.5rem 0 1rem;
+    font-weight: 600;
+    color: #4a214a;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .d {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #5a2a57;
+    font-family: 'Arial', sans-serif;
+  }
+  
