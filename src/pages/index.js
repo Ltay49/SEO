@@ -57,7 +57,7 @@ export default function Home() {
           content="Expert manicures, pedicures, and nail art services in Oldham. Beautiful nails, friendly service."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mm-nails.example.com/" />
+        <meta property="og:url" content="https://mmnailsalon.netlify.app/" />
         <meta
           property="og:image"
           content="https://mmnailsalon.netlify.app/images/nail2.jpg"
@@ -75,7 +75,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://mm-nails.example.com/images/og-image.jpg"
+          content="https://mmnailsalon.netlify.app/images/nail2.jpg"
         />
         {/* Structured Data */}
         <script
@@ -178,11 +178,11 @@ export default function Home() {
           <p>
             Located in the heart of Oldham, <strong>M&amp;M Nails</strong> is
             your go-to destination for professional manicures, pedicures, and
-            bespoke nail art. Whether you&apos;re preparing for a special occasion or
-            simply want healthy, beautiful nails, our experienced nail
-            technicians deliver high-quality service in a clean and friendly
-            environment. Visit us today and discover why so many locals in
-            Oldham trust us for their nail care.
+            bespoke nail art. Whether you&apos;re preparing for a special
+            occasion or simply want healthy, beautiful nails, our experienced
+            nail technicians deliver high-quality service in a clean and
+            friendly environment. Visit us today and discover why so many locals
+            in Oldham trust us for their nail care.
           </p>
 
           <h3>Frequently Asked Questions</h3>
@@ -190,7 +190,8 @@ export default function Home() {
             <details>
               <summary>Where is M&amp;M Nails located?</summary>
               <p>
-                We&apos;re based in central Oldham, near <em>[insert landmark]</em>.
+                We&apos;re based in central Oldham, near{" "}
+                <em>[insert landmark]</em>.
               </p>
             </details>
 
