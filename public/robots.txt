@@ -1,4 +1,9 @@
-User-agent: *
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://mmnailsalon.netlify.app
+
+# Sitemaps
 Sitemap: https://mmnailsalon.netlify.app/sitemap.xml

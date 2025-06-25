@@ -26,6 +26,53 @@ export default function Home() {
     priceRange: "££",
   };
 
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Do I need to book an appointment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Walk-ins are welcome, but we recommend calling ahead to check availability.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can I walk in without an appointment?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! M&M Nails is one of the top-rated nail salons for walk-ins in Oldham. We welcome clients without appointments for manicures, acrylic nails, and pedicures.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What services do you offer?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "We provide manicures, pedicures, acrylics, gel nails, and custom nail art tailored to your preferences.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Can a nail salon fix a broken nail?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes! M&M Nails offers professional nail repair for broken acrylic, gel, or natural nails. Whether it’s a chip, split, or complete break, our skilled technicians in Oldham can restore your nails quickly and safely.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are nail salon fumes bad for pregnancy?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "While occasional exposure is generally considered safe, prolonged exposure to strong nail salon fumes during pregnancy may cause discomfort or sensitivity. At M&M Nails, we ensure proper ventilation to maintain a safe and comfortable environment for all clients, including expectant mothers.",
+        },
+      },
+    ],
+  };
+
   return (
     <>
       <Head>
@@ -81,6 +128,12 @@ export default function Home() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqStructuredData),
+          }}
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
@@ -218,6 +271,28 @@ export default function Home() {
               <p>
                 We provide manicures, pedicures, acrylics, gel nails, and custom
                 nail art tailored to your preferences.
+              </p>
+            </details>
+            <details>
+              <summary>Can a nail salon fix a broken nail?</summary>
+              <p>
+                Yes! <strong>M&amp;M Nails</strong> offers professional nail
+                repair for{" "}
+                <strong>broken acrylic, gel, or natural nails</strong>. Whether
+                it&apos;s a chip, split, or complete break, our skilled
+                technicians in <strong>Oldham</strong> can restore your nails
+                quickly and safely.
+              </p>
+            </details>
+            <details>
+              <summary>Are nail salon fumes bad for pregnancy?</summary>
+              <p>
+                While occasional exposure is generally considered safe,
+                prolonged exposure to strong <strong>nail salon fumes</strong>{" "}
+                during pregnancy may cause discomfort or sensitivity. At{" "}
+                <strong>M&amp;M Nails</strong>, we ensure proper ventilation to
+                maintain a safe and comfortable environment for all clients,
+                including expectant mothers.
               </p>
             </details>
           </div>

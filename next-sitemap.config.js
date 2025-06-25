@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: 'https://mm-nails.example.com', // Replace with your actual domain
+    siteUrl: 'https://mmnailsalon.netlify.app',
     generateRobotsTxt: true,
   }
   
